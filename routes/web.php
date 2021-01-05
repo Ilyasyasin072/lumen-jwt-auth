@@ -18,23 +18,15 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
 
+    
+    $router->group(['prefix' => 'login'], function () use ($router) {
+        $router->post('/', 'AuthController@login');
+    });
+
     $router->group(['prefix' => 'post'], function() use ($router) {
         $router->get('/get', 'PostController@index');
         $router->post('/store', 'PostController@store');
         $router->put('/update/{id}' , 'PostController@update');
         $router->delete('/delete/{id}', 'PostController@destroy');
     });
-
-    $router->group(['prefix' => 'login'], function () use ($router) {
-        $router->post('/', 'AuthController@login');
-    });
-
-
-
-// $router->post('/login', function (Request $request) {
-//     $apps = $request->only('name', 'password');
-//     // var_dump($apps); die;
-//     $token = app('auth')->attempt($request->only('name', 'password'));
-//     return response()->json(compact('token'));
-// });
 });
