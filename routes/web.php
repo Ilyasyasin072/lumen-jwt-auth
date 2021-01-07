@@ -12,21 +12,23 @@ use \Illuminate\Http\Request;
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+// $router->group(['prefix' => '/'], function () use ($router) {
+//     $router->get('/', 'ExampleController@print');
+// });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+// $router->group(['prefix' => 'api'], function () use ($router) {
 
     
-    $router->group(['prefix' => 'login'], function () use ($router) {
-        $router->post('/', 'AuthController@login');
-    });
+//     $router->group(['prefix' => 'login'], function () use ($router) {
+//         $router->post('/', 'AuthController@login');
+//     });
 
-    $router->group(['prefix' => 'post'], function() use ($router) {
-        $router->get('/get', 'PostController@index');
-        $router->post('/store', 'PostController@store');
-        $router->put('/update/{id}' , 'PostController@update');
-        $router->delete('/delete/{id}', 'PostController@destroy');
-    });
-});
+//     $router->group(['prefix' => 'post'], function() use ($router) {
+//         $router->get('/get', 'PostController@index');
+//         $router->post('/store', 'PostController@store');
+//         $router->put('/update/{id}' , 'PostController@update');
+//         $router->delete('/delete/{id}', 'PostController@destroy');
+//     });
+// });
+
+$router->get('/', 'Posts\PostController@index');

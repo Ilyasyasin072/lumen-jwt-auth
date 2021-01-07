@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "65d54e54251cff9268cf38be4955c8af",
+    "content-hash": "79fa35a9a89f445f48b2e6a6196117d4",
     "packages": [
         {
             "name": "brick/math",
@@ -2048,6 +2048,46 @@
                 "time"
             ],
             "time": "2020-12-17T20:55:32+00:00"
+        },
+        {
+            "name": "neysi/directprint",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neysi/directprint.git",
+                "reference": "66af94dd1e77bea5045fbc2b05997734b8998aa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neysi/directprint/zipball/66af94dd1e77bea5045fbc2b05997734b8998aa5",
+                "reference": "66af94dd1e77bea5045fbc2b05997734b8998aa5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Neysi\\DirectPrint\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Neysi Tuesta",
+                    "email": "neysitcs@gmail.com",
+                    "homepage": "http://revive.pe"
+                }
+            ],
+            "description": "Easy and direct file print from PHP",
+            "time": "2016-05-03T12:32:54+00:00"
         },
         {
             "name": "nikic/fast-route",
